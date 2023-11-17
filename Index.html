@@ -8,12 +8,30 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinema+Script&display=swap">
     <link rel="stylesheet" href="styles.css">
     <title>World Xplore</title>
+    <style>
+        @media only screen and (max-width: 768px) {
+    #video-bg {
+        display: none;
+    }
+
+    body {
+        background-image: url('C:/C219/L03/AdobeStock_281457367_Preview.jpeg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+    </style>
 </head>
 <body>
 
     <header>
+        <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
         <nav class="nav-links">
-            <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
             <a href="#index">Home</a>
             <div class="dropdown">
                 <a href="packagetours.html">Package Tours</a>
@@ -66,6 +84,15 @@
     <footer>
         <p>&copy; 2023 World Xplore. All rights reserved.</p>
     </footer>
+    
+    <script>
+        // JavaScript to toggle the mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
 
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>

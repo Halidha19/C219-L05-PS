@@ -60,8 +60,15 @@
 <body>
 
     <header>
-        <nav class="nav-links">
+        <div class="logo-container">
             <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-links">
             <a href="Index.html">Home</a>
             <div class="dropdown">
                 <a href="packagetours.html">Package Tours</a>
@@ -109,6 +116,16 @@
     <footer>
         <p>&copy; 2023 World Xplore. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>

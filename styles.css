@@ -217,3 +217,60 @@ body {
         overflow-y: auto; /* Enable vertical scrollbar for smaller screens */
     }
 }
+
+/* Hamburger menu styles */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 10px; /* Adjust margin for the logo */
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-top: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        background-color: #069fa7e2;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        z-index: 1;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 10px 0;
+    }
+    
+    #video-bg {
+        display: none;
+        background: url('path/to/your/image.jpg') no-repeat center center fixed;
+        background-size: cover;
+    }
+}

@@ -60,29 +60,22 @@
 <body>
 
     <header>
-        <nav class="nav-links">
+        <div class="logo-container">
             <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
+        </div>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <nav class="nav-links">
             <a href="Index.html">Home</a>
-            <a href="packagetours.html">Package Tours</a>
             <div class="dropdown">
-                <a href="#">Tour 1</a>
+                <a href="packagetours.html">Package Tours</a>
                 <ul class="dropdown-content">
-                    <li><a href="#">Details 1</a></li>
-                    <li><a href="#">Itinerary 1</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <a href="#">Tour 2</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Details 2</a></li>
-                    <li><a href="#">Itinerary 2</a></li>
-                </ul>
-            </div>
-            <div class="dropdown">
-                <a href="#">Tour 3</a>
-                <ul class="dropdown-content">
-                    <li><a href="#">Details 3</a></li>
-                    <li><a href="#">Itinerary 3</a></li>
+                    <li><a href="#">Tour 1</a></li>
+                    <li><a href="#">Tour 2</a></li>
+                    <li><a href="#">Tour 3</a></li>
                 </ul>
             </div>
             <a href="#rs">Rediscover Singapore</a>
@@ -90,7 +83,7 @@
             <a href="#contact">Contact Us</a>
         </nav>
     </header>
-    
+
     <div id="overlay"></div>
 
     <video autoplay muted loop id="video-bg">
@@ -123,6 +116,16 @@
     <footer>
         <p>&copy; 2023 World Xplore. All rights reserved.</p>
     </footer>
+
+    <script>
+        // JavaScript to toggle the mobile menu
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
