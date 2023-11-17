@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Package Tours - World Xplore</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #video-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        #main-content {
+            position: relative;
+            z-index: 1;
+            color: white; /* Set text color to white for better visibility */
+            padding: 20px; /* Add some padding to the content */
+        }
+
+        #main-content h2 {
+            color: white; /* Set heading color to white */
+        }
+
+        .tour-option {
+            margin-bottom: 20px; /* Add margin between each tour option */
+        }
+
+        .tour-option img {
+            width: 100%; /* Make images responsive */
+            border-radius: 10px; /* Add border-radius for rounded corners */
+        }
+
+        #main-content p {
+            color: white; /* Set text color to white for paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
+            <a href="Index.html">Home</a>
+            <a href="packagetours.html">Package Tours</a>
+            <div class="dropdown">
+                <a href="#">Tour 1</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Details 1</a></li>
+                    <li><a href="#">Itinerary 1</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a href="#">Tour 2</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Details 2</a></li>
+                    <li><a href="#">Itinerary 2</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <a href="#">Tour 3</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Details 3</a></li>
+                    <li><a href="#">Itinerary 3</a></li>
+                </ul>
+            </div>
+            <a href="#rs">Rediscover Singapore</a>
+            <a href="cruises.html">Cruises</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    
+    <div id="overlay"></div>
+
+    <video autoplay muted loop id="video-bg">
+        <source src="C:\C219\L03\video (1080p).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <section id="main-content">
+        <h2>Explore Our Exciting Package Tours</h2>
+
+        <article class="tour-option">
+            <h3>Tour 1</h3>
+            <img src="C:\C219\L03\pexels-andrea-piacquadio-3830880.jpg" alt="Tour 1 Image">
+            <p>Discover the wonders of Tour 1 with our exclusive package. Explore breathtaking landscapes and enjoy curated experiences throughout your journey.</p>
+        </article>
+
+        <article class="tour-option">
+            <h3>Tour 2</h3>
+            <img src="C:\C219\L03\pexels-naim-benjelloun-2291367.jpg" alt="Tour 2 Image">
+            <p>Embark on an adventure with Tour 2. Immerse yourself in unique cultures, savor local cuisines, and create unforgettable memories with our carefully crafted itinerary.</p>
+        </article>
+
+        <article class="tour-option">
+            <h3>Tour 3</h3>
+            <img src="C:\C219\L03\pexels-kirandeep-singh-walia-10596860.jpg" alt="Tour 3 Image">
+            <p>Experience the magic of Tour 3. From historical landmarks to vibrant markets, this package offers a diverse and enriching travel experience for every explorer.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 World Xplore. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

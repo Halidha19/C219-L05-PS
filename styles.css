@@ -1,0 +1,219 @@
+/* styles.css */
+@media only screen and (max-width: 768px) {
+    #video-bg {
+        display: none; /* Hide the video on smaller screens */
+    }
+
+    body {
+        background-image: url('path/to/your/image.jpg');
+        background-size: cover;
+        background-position: center;
+    }
+}
+body {
+    font-family: 'Cinema Script', cursive, bold;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #069fa7e2; 
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Adjusted to align logo and nav to the left and right */
+    position: relative; /* Add position relative to position the video */
+    z-index: 1; /* Ensure the header is above the video */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    z-index: 2; /* Ensure the nav is above the video */
+}
+
+.logo {
+    width: 200px; /* Adjust the width as needed */
+    margin-right: 700px; /* Add some space between the logo and the menu */
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff; 
+    font-size: 20px;
+    transition: color 0.3s ease;
+    margin-right: 20px;
+}
+
+nav a:last-child {
+    margin-right: 0; /* Remove margin from the last link to prevent extra spacing */
+}
+
+nav a:hover {
+    color: #cf0369;
+}
+.nav-links ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #069fa7e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-links:hover ul {
+    display: block;
+}
+
+/* Style the video to cover the entire viewport */
+#video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Ensure the video is below the content */
+}
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #069fa7e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#main-content {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex: 1; /* Take remaining vertical space */
+    align-items: center; /* Center the content vertically */
+}
+
+article {
+    flex: 1 1 300px;
+    margin: 20px;
+    text-align: center;
+}
+.article-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+article img {
+    width: 100%;
+    border-radius: 10px;
+}    
+.article img:hover {
+        transform: scale(1.2);
+    
+}
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+@media only screen and (max-width: 768px) {
+    #main-content {
+        padding: 20px; /* Adjust padding for better readability */
+    }
+
+    article h2,
+    article p,
+    .image-text {
+        font-size: 16px; /* Adjust font size for better readability */
+    }
+}
+article h2, article p {
+    color: #000000; /* Set article text color to white */
+}
+.logo:hover {
+    animation: rotateLogo 1s ease-in-out;
+}
+
+@keyframes rotateLogo {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+nav a.current,
+nav a:hover {
+    color: #cf0369;
+}
+
+/* Add class "current" to the active page link */
+
+footer {
+    background-color: #069fa7e2;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: auto; /* Push the footer to the bottom */
+}
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        margin: 10px 0; /* Adjust margin for the logo */
+    }
+
+    nav a {
+        margin: 0;
+    }
+
+    article {
+        flex: 1 1 100%; /* Adjust article width for smaller screens */
+    }
+}
+nav a {
+    scroll-behavior: smooth;
+}
+body {
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-y: auto; /* Enable vertical scrollbar for smaller screens */
+    }
+}

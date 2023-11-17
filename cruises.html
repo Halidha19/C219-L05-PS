@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Cruises - World Xplore</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        #video-bg {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        #overlay {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency here */
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+
+        #main-content {
+            position: relative;
+            z-index: 1;
+            color: white; /* Set text color to white for better visibility */
+            padding: 20px; /* Add some padding to the content */
+        }
+
+        #main-content h2 {
+            color: white; /* Set heading color to white */
+        }
+
+        .cruise-option {
+            margin-bottom: 20px; /* Add margin between each cruise option */
+        }
+
+        .cruise-option img {
+            width: 100%; /* Make images responsive */
+            border-radius: 10px; /* Add border-radius for rounded corners */
+        }
+
+        #main-content p {
+            color: white; /* Set text color to white for paragraphs */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-links">
+            <img src="L03_C219_EX 2.svg" alt="World Xplore Logo" class="logo">
+            <a href="Index.html">Home</a>
+            <div class="dropdown">
+                <a href="packagetours.html">Package Tours</a>
+                <ul class="dropdown-content">
+                    <li><a href="#">Tour 1</a></li>
+                    <li><a href="#">Tour 2</a></li>
+                    <li><a href="#">Tour 3</a></li>
+                </ul>
+            </div>
+            <a href="#rs">Rediscover Singapore</a>
+            <a href="cruises.html">Cruises</a>
+            <a href="#contact">Contact Us</a>
+        </nav>
+    </header>
+    
+    <div id="overlay"></div>
+
+    <video autoplay muted loop id="video-bg">
+        <source src="C:\C219\L03\pexels-glenn-langhorst-11335970 (2160p).mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <section id="main-content">
+        <h2>Choose Your Cruise Experience</h2>
+
+        <article class="cruise-option">
+            <h3>Business Class</h3>
+            <img src="C:\C219\L03\pexels-engin-akyurt-1579253.jpg" alt="Business Class Cruise">
+            <p>Indulge in the epitome of luxury with our Business Class cruise experience. Enjoy spacious cabins, gourmet dining, and personalized service throughout your journey.</p>
+        </article>
+
+        <article class="cruise-option">
+            <h3>Economic</h3>
+            <img src="C:\C219\L03\pexels-pixabay-271618.jpg" alt="Economic Class Cruise">
+            <p>Experience the perfect balance of comfort and affordability with our Economic cruise packages. Explore stunning destinations without compromising on quality.</p>
+        </article>
+
+        <article class="cruise-option">
+            <h3>Budgeted</h3>
+            <img src="C:\C219\L03\pexels-naim-benjelloun-2029722.jpg" alt="Budgeted Class Cruise">
+            <p>Embark on an exciting adventure without breaking the bank. Our Budgeted cruise options offer great value for your money, ensuring a memorable cruise experience on a budget.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 World Xplore. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
